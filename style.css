@@ -1,0 +1,92 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* VS Code Theme Styling */
+body.vscode-theme {
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    font-family: Consolas, 'Courier New', monospace;
+}
+
+.vscode-theme .detalii p {
+    margin: 0.5em 0;
+    font-size: 1.2em;
+}
+
+.vscode-theme .detalii strong {
+    color: #569cd6;
+}
+
+/* Button Tech Style */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+.tech-button {
+    padding: 1em 2em;
+    font-size: 1.2em;
+    color: #0ff;
+    background: #222;
+    border: 2px solid #0ff;
+    border-radius: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.3s ease;
+    transform: perspective(400px) rotateX(20deg);
+    box-shadow: 0 0 10px #0ff;
+}
+
+.tech-button:hover {
+    transform: perspective(400px) rotateX(0deg);
+    background: #0ff;
+    color: #222;
+}
+
+/* Matrix Background Styling */
+body.matrix-background {
+    background-color: black;
+    color: lime;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.matrix-background .skills {
+    text-align: center;
+    font-size: 1.5em;
+    color: #00ff00;
+}
+
+.matrix-background ul li {
+    list-style: none;
+    line-height: 1.8em;
+}
+
+/* Animations for Matrix Effect */
+@keyframes matrix-anim {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+.matrix-column {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+.matrix-text {
+    color: lime;
+    opacity: 0;
+    animation: matrix-anim 1.5s linear infinite;
+}
